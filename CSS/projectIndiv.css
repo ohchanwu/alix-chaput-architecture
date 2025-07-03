@@ -87,16 +87,13 @@
 /* Discrepancy is due to the NavBar's height */
 
 @media (min-aspect-ratio: 1.43 / 1) {
-	.projectImgContainer:not(.GV):not(.SG):not(.art) img {
+	.projectImgContainer:not(.NDDC):not(.GV):not(.SG):not(.art) img {
 		width: var(--coverImageWidth);
 	}
 }
 @media (max-aspect-ratio: 1.43 / 1) {
 	.projectImgContainer:not(.NDDC):not(.GV):not(.SG):not(.art) img {
 		height: var(--coverImageHeight);
-	}
-	.NDDC img{
-		width: var(--coverImageWidth);
 	}
 }
 
@@ -114,6 +111,17 @@
 }
 @media (max-aspect-ratio: 1.264 / 1) {
 	.SG img {
+		height: var(--coverImageHeight);
+	}
+}
+
+@media (min-aspect-ratio: 0.7 / 1) {
+	.NDDC img {
+		width: var(--coverImageWidth);
+	}
+}
+@media (max-aspect-ratio: 0.7 / 1) {
+	.NDDC img {
 		height: var(--coverImageHeight);
 	}
 }
