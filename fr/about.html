@@ -1,448 +1,625 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À Propos | Alix C. Architecture</title>
-  <link href="../CSS/styles.css" rel="stylesheet"/>
-  <link href="../CSS/about.css" rel="stylesheet"/>
-  <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À Propos | Alix C. Architecture</title>
+    <link href="../CSS/styles.css" rel="stylesheet" />
+    <link href="../CSS/about.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
 
-<body>
+  <body>
+    <div id="content-container">
+      <div id="main-content">
+        <nav class="mainNav" aria-label="Main navigation">
+          <a href="../index.html" class="noMarginText titleText long"
+            ><span class="name">ALIX CHAPUT</span>
+            <span class="ghost">| </span>ARCHITECTURE</a
+          >
+          <a href="../index.html" class="noMarginText titleText short"
+            ><span class="name">ALIX C.</span> ARCHITECTURE</a
+          >
+          <div class="links main">
+            <a class="link" href="about.html"
+              ><div class="noMarginText">À PROPOS</div></a
+            >
+            <a class="link" href="projects.html"
+              ><div class="noMarginText">PROJETS</div></a
+            >
+            <a class="link" href="contact.html"
+              ><div class="noMarginText">ME CONTACTER</div></a
+            >
+            <!-- <a class="link lang" href="../en/about.html" alt="English"><img src="../images/UK.webp"></a> -->
+            <button class="link darkModeToggle">
+              <div class="circle"><img src="../images/icons/sun.webp" /></div>
+            </button>
+            <button class="link lightModeToggle">
+              <div class="circle"><img src="../images/icons/moon.webp" /></div>
+            </button>
+          </div>
+        </nav>
 
-  <div id = "content-container">
+        <input id="hamToggle" type="checkbox" style="display: none" />
+        <label class="hamIcon" for="hamToggle">
+          <div class="hamLine"></div>
+          <div class="hamLine"></div>
+          <div class="hamLine"></div>
+        </label>
+        <nav class="hamburger" aria-label="Small-screen navigation">
+          <div class="links hamburgerLinks">
+            <a class="link" href="about.html"
+              ><div class="noMarginText">À PROPOS</div></a
+            >
+            <a class="link" href="projects.html"
+              ><div class="noMarginText">PROJETS</div></a
+            >
+            <a class="link" href="contact.html"
+              ><div class="noMarginText">CONTACT</div></a
+            >
+            <!-- <a class="link lang" href="../en/about.html" alt="English"><img src="../images/UK.webp"></a> -->
+            <button class="link darkModeToggle">
+              <div class="circle"><img src="../images/icons/sun.webp" /></div>
+            </button>
+            <button class="link lightModeToggle">
+              <div class="circle"><img src="../images/icons/moon.webp" /></div>
+            </button>
+          </div>
+        </nav>
 
-    <div id = "main-content">
-
-      <nav class="mainNav" aria-label="Main navigation">
-        <a href="../index.html" class="noMarginText titleText long"><span class="name">ALIX CHAPUT</span> <span class="ghost">| </span>ARCHITECTURE</a>
-        <a href="../index.html" class="noMarginText titleText short"><span class="name">ALIX C.</span> ARCHITECTURE</a>
-        <div class="links main">
-          <a class="link" href="about.html"><div class="noMarginText">À PROPOS</div></a>
-          <a class="link" href="projects.html"><div class="noMarginText">PROJETS</div></a>
-          <a class="link" href="contact.html"><div class="noMarginText">ME CONTACTER</div></a>
-          <!-- <a class="link lang" href="../en/about.html" alt="English"><img src="../images/UK.webp"></a> -->
-          <button class="link darkModeToggle"><div class="circle"><img src="../images/icons/sun.webp"/></div></button>
-          <button class="link lightModeToggle"><div class="circle"><img src="../images/icons/moon.webp"/></div></button>
+        <div class="coverImage">
+          <div class="slides">
+            <img src="../images/coverImgs/coverImg1.webp" alt="intro image" />
+            <img src="../images/coverImgs/coverImg2.jpg" alt="intro image" />
+            <img src="../images/coverImgs/coverImg3.jpg" alt="intro image" />
+            <img src="../images/coverImgs/coverImg4.jpg" alt="intro image" />
+          </div>
+          <div class="prev clicker">❮</div>
+          <div class="next clicker">❯</div>
+          <div class="rest">EN SAVOIR PLUS</div>
         </div>
-      </nav>
 
-      <input id="hamToggle" type="checkbox" style="display: none">
-      <label class="hamIcon" for="hamToggle">
-        <div class="hamLine"></div><div class="hamLine"></div><div class="hamLine"></div>
-      </label>
-      <nav class="hamburger" aria-label="Small-screen navigation">
-        <div class="links hamburgerLinks">
-          <a class="link" href="about.html"><div class="noMarginText">À PROPOS</div></a>
-          <a class="link" href="projects.html"><div class="noMarginText">PROJETS</div></a>
-          <a class="link" href="contact.html"><div class="noMarginText">CONTACT</div></a>
-          <!-- <a class="link lang" href="../en/about.html" alt="English"><img src="../images/UK.webp"></a> -->
-          <button class="link darkModeToggle"><div class="circle"><img src="../images/icons/sun.webp"/></div></button>
-          <button class="link lightModeToggle"><div class="circle"><img src="../images/icons/moon.webp"/></div></button>
-        </div>
-      </nav>
+        <div class="border">
+          <div class="rest2 clicker">❯</div>
 
-      <div class="coverImage">
-        <div class="slides">
-          <img src="../images/coverImgs/coverImg1.webp" alt="intro image"/>
-          <img src="../images/coverImgs/coverImg2.jpg" alt="intro image"/>
-          <img src="../images/coverImgs/coverImg3.jpg" alt="intro image"/>
-          <img src="../images/coverImgs/coverImg4.jpg" alt="intro image"/>
-        </div>
-        <div class="prev clicker">❮</div>
-        <div class="next clicker">❯</div>
-        <div class="rest">EN SAVOIR PLUS</div>
-      </div>
-
-      <div class="border">
-
-        <div class="rest2 clicker">❯</div>
-
-        <div class="startEnd start">
-          <div class="divider left down">
-            <img class="dividerLightMode" src="../images/icons/iconDown.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/down.webp">
-          </div>
-
-          <h1 class="header">À PROPOS</h1>
-
-          <div class="divider right down">
-            <img class="dividerLightMode" src="../images/icons/iconDown.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/down.webp">
-          </div>
-        </div>
-
-        <main id="main">
-
-          <div class="intro">
-            <picture id="imgContainer">
-              <source media="(min-aspect-ratio: 1.75/1)" srcset="../images/large.webp">
-              <source media="(min-width: 1025px)" srcset="../images/large.webp">
-              <source media="(max-width: 1024px)" srcset="../images/small.webp">
-              <img src="../images/output.webp" alt="Alix Chaput Profile Photo"/>
-            </picture>
-            <div id="introContent">
-              <div class="contentWrapper" id="introContentWrapper">
-                <div id="introText">
-                  <p class="firstPara">
-                    "Je m’appelle Alix Chaput, je suis diplômée d’État en architecture et j’exerce depuis 2021 comme architecte chargée de projet. 
-                  </p><br>
-                  <p>
-                    J’ai développé, à travers mon parcours dans différentes agences, une prédilection pour la rénovation et la réhabilitation lourde 
-                    de bâtiments. Ce mode d’exercice me permet jour après jour de combiner mon intérêt pour la connaissance du patrimoine bâti d’une 
-                    part et ma volonté de contribuer activement, d’autre part, à la transformation de ce dernier. 
-                  </p><br>
-                  <p>
-                    Habitant la métropole parisienne, j’interviens majoritairement sur des projets ancrés dans ce territoire, où les questions de 
-                    densification urbaine et de mutation de l’existant se posent de manière de plus en plus saillantes. Dans une perspective où les 
-                    enjeux d’habitabilité et d’adéquation de nos bâtiments aux exigences environnementales sont croissants, je souhaite m’investir 
-                    avant tout dans des projets au sein desquels ces notions raisonnent concrètement et se traduisent en propositions audacieuses. 
-                    Il est question pour moi de s’engager, dès aujourd’hui, à produire une urbanité et des espaces de vie à la fois soutenables, 
-                    désirables et inclusifs. 
-                  </p><br>
-                  <p>
-                    Chemin faisant, je suis donc à l’écoute des opportunités qui me mèneront, tant professionnellement que personnellement, à 
-                    renforcer mes compétences et mon expérience dans cette ambitieuse direction.<span class="apostrophe">"</span>
-                  </p>
-                </div>
-              </div>
+          <div class="startEnd start">
+            <div class="divider left down">
+              <img
+                class="dividerLightMode"
+                src="../images/icons/iconDown.webp"
+              />
+              <img
+                class="dividerDarkMode"
+                src="../images/darkIcons/down.webp"
+              />
             </div>
-            <img id="signature" class="dividerLightMode" src="../images/signatureColor6.webp" alt="Signature"/>
-            <img id="signature" class="dividerDarkMode" src="../images/darkIcons/signature_dark.webp" alt="Signature"/>
-            <div class="introCloseText long">
-              <span class="bold"><a href="../images/CV.pdf" target="_blank" alt="CV">TÉLÉCHARGER MON CV</a><div>&nbsp;&nbsp;|&nbsp;&nbsp;</div
-                ><a href="https://www.calameo.com/read/007726246e14353561d75" target="_blank" alt="Portfolio">VOIR MON PORTFOLIO</a></span>
-            </div>
-            <div class="introCloseText short">
-              <span class="bold"><a href="../images/CV.pdf" target="_blank" alt="CV">VOIR MON CV</a><div>&nbsp;&nbsp;|&nbsp;&nbsp;</div
-                ><a href="https://www.calameo.com/read/007726246e14353561d75" target="_blank" alt="Portfolio">PORTFOLIO</a></span>
+
+            <h1 class="header">À PROPOS</h1>
+
+            <div class="divider right down">
+              <img
+                class="dividerLightMode"
+                src="../images/icons/iconDown.webp"
+              />
+              <img
+                class="dividerDarkMode"
+                src="../images/darkIcons/down.webp"
+              />
             </div>
           </div>
 
-          <div class="divider asterisk">
-            <img class="dividerLightMode" src="../images/asterisk.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/asterisk.webp">
-          </div>
-          <h2 class="header">EXPÉRIENCE PROFESSIONELLE</h2>
-          <div class="section">
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>MOATTI-RIVIÈRE</h3>
-                      <div class="ita subTitle"><i>ARCHITECTURE & SCÉNOGRAPHIE</i></div>
-                    </div>
-                    <span class="bold">ARCHITECTE</span>
-                    <div>
-                      <div class="descDate">2024 - 2025</div>
-                      <div class="contract">CDI 9 mois</div>
-                    </div>
-                    <div class="noMarginText number">5</div>
-                  </div>
-                </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="underline">Chargée de projet<br>Conception</div>
-                    <div>Projet en phases APS, APD, PC<br>Autocad</div>
-                    <div>Architecture<br>Réhabilitation lourde<br>ERP & bureaux<br>Haut de gamme</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sectionItem image">
-              <img src="../images/sectionItems/jobSection1.jpg"/>
-            </div>
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>ARTQAD ARCHITECTES</h3>
-                    </div>
-                    <span class="bold">ARCHITECTE</span>
-                    <div>
-                      <div class="descDate">2021 - 2023</div>
-                      <div class="contract">CDI</div>
-                    </div>
-                    <div class="noMarginText number">4</div>
-                  </div>
-                </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="underline">Référente de projet BIM<br>Conception et exécution</div>
-                    <div>Projets en APD, PC, PRO, DCE, EXE<br>Suivi de chantier</div>
-                    <div>Architecture & architecture d’intérieur<br>Projets tertiaires et résidentiels<br>Restructuration<br>Haut de gamme</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sectionItem image">
-              <img src="../images/sectionItems/jobSection2.jpg"/>
-            </div>
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>GRAAL</h3>
-                    </div>
-                    <span class="bold">STAGIAIRE</span>
-                    <div>
-                      <div class="descDate">2020</div>
-                      <div class="contract">Formation pratique</div>
-                    </div>
-                    <div class="noMarginText number">3</div>
-                  </div>
-                </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="underline">Stagiaire</div>
-                    <div>Revit<br>Candidatures<br>Maquettage<br>APS, APD<br>Chantier</div>
-                    <div>Architecture & urbanisme<br>Logements et équipements publics<br>Éco-construction</div>
+          <main id="main">
+            <div class="intro">
+              <picture id="imgContainer">
+                <source
+                  media="(min-aspect-ratio: 1.75/1)"
+                  srcset="../images/large.webp"
+                />
+                <source
+                  media="(min-width: 1025px)"
+                  srcset="../images/large.webp"
+                />
+                <source
+                  media="(max-width: 1024px)"
+                  srcset="../images/small.webp"
+                />
+                <img
+                  src="../images/output.webp"
+                  alt="Alix Chaput Profile Photo"
+                />
+              </picture>
+              <div id="introContent">
+                <div class="contentWrapper" id="introContentWrapper">
+                  <div id="introText">
+                    <p class="firstPara">
+                      "Je m’appelle Alix Chaput, je suis diplômée d’État en
+                      architecture et j’exerce depuis 2021 comme architecte
+                      chargée de projet.
+                    </p>
+                    <br />
+                    <p>
+                      J’ai développé, à travers mon parcours dans différentes
+                      agences, une prédilection pour la rénovation et la
+                      réhabilitation lourde de bâtiments. Ce mode d’exercice me
+                      permet jour après jour de combiner mon intérêt pour la
+                      connaissance du patrimoine bâti d’une part et ma volonté
+                      de contribuer activement, d’autre part, à la
+                      transformation de ce dernier.
+                    </p>
+                    <br />
+                    <p>
+                      Habitant la métropole parisienne, j’interviens
+                      majoritairement sur des projets ancrés dans ce territoire,
+                      où les questions de densification urbaine et de mutation
+                      de l’existant se posent de manière de plus en plus
+                      saillantes. Dans une perspective où les enjeux
+                      d’habitabilité et d’adéquation de nos bâtiments aux
+                      exigences environnementales sont croissants, je souhaite
+                      m’investir avant tout dans des projets au sein desquels
+                      ces notions raisonnent concrètement et se traduisent en
+                      propositions audacieuses. Il est question pour moi de
+                      s’engager, dès aujourd’hui, à produire une urbanité et des
+                      espaces de vie à la fois soutenables, désirables et
+                      inclusifs.
+                    </p>
+                    <br />
+                    <p>
+                      Chemin faisant, je suis donc à l’écoute des opportunités
+                      qui me mèneront, tant professionnellement que
+                      personnellement, à renforcer mes compétences et mon
+                      expérience dans cette ambitieuse direction.<span
+                        class="apostrophe"
+                        >"</span
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="sectionItem image">
-              <img src="../images/sectionItems/jobSection3.jpg"/>
-            </div>
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>SAROAM</h3>
-                    </div>
-                    <span class="bold">STAGIAIRE</span>
-                    <div>
-                      <div class="descDate">2019</div>
-                      <div class="contract">Première pratique</div>
-                    </div>
-                    <div class="noMarginText number">2</div>
-                  </div>
-                </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="underline">Stagiaire</div>
-                    <div>Revit<br>Étude de faisabilité<br>APS, APD</div>
-                    <div>Architecture & urbanisme<br>Logements et équipements publics<br>Éco-construction</div>
-                  </div>
-                </div>
+              <img
+                id="signature"
+                class="dividerLightMode"
+                src="../images/signatureColor6.webp"
+                alt="Signature"
+              />
+              <img
+                id="signature"
+                class="dividerDarkMode"
+                src="../images/darkIcons/signature_dark.webp"
+                alt="Signature"
+              />
+              <div class="introCloseText long">
+                <span class="bold"
+                  ><a href="../images/CV.pdf" target="_blank" alt="CV"
+                    >TÉLÉCHARGER MON CV</a
+                  >
+                  <div>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+                  <a
+                    href="../images/portfolio.pdf"
+                    target="_blank"
+                    alt="Portfolio"
+                    >VOIR MON PORTFOLIO</a
+                  ></span
+                >
+              </div>
+              <div class="introCloseText short">
+                <span class="bold"
+                  ><a href="../images/CV.pdf" target="_blank" alt="CV"
+                    >VOIR MON CV</a
+                  >
+                  <div>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+                  <a
+                    href="../images/portfolio.pdf"
+                    target="_blank"
+                    alt="Portfolio"
+                    >PORTFOLIO</a
+                  ></span
+                >
               </div>
             </div>
 
-            <div class="sectionItem image odds">
-              <img src="../images/sectionItems/jobSection4.jpg"/>
+            <div class="divider asterisk">
+              <img class="dividerLightMode" src="../images/asterisk.webp" />
+              <img
+                class="dividerDarkMode"
+                src="../images/darkIcons/asterisk.webp"
+              />
             </div>
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>STUDIO PRIVÉ</h3>
-                    </div>
-                    <span class="bold">STAGIAIRE</span>
-                    <div>
-                      <div class="descDate">2018</div>
-                      <div class="contract">Chantier</div>
-                    </div>
-                    <div class="noMarginText number">1</div>
-                  </div>
-                </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="underline">Stagiaire</div>
-                    <div>Accompagnement et assistance sur chantier</div>
-                    <div>Architecture d’intérieur<br>résidentiel<br>Haut de gamme</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="divider asterisk">
-            <img class="dividerLightMode" src="../images/asterisk.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/asterisk.webp">
-          </div>
-
-          <h2 class="header">FORMATION & DIPLÔMES</h2>
-
-          <div class="section">
-
-            <div class="sectionItem image odds">
-              <img src="../images/sectionItems/degreeSection1.jpg"/>
-            </div>
-
-            <div class="siContainer">
-              <div class="flipper">
-                <div class="sectionItem front">
-                  <div class="contentWrapper">
-                    <div>
-                      <h3>PARIS VAL DE SEINE</h3>
-                      <div class="subTitle"><i>ÊCOLE NATIONALE SUPÉRIEURE D'ARCHITECTURE</i></div>
-                    </div>
-                    <div>
+            <h2 class="header">EXPÉRIENCE PROFESSIONELLE</h2>
+            <div class="section">
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
                       <div>
-                        <div class="descDate">2017 - 2021</div>
+                        <h3>MOATTI-RIVIÈRE</h3>
+                        <div class="ita subTitle">
+                          <i>ARCHITECTURE & SCÉNOGRAPHIE</i>
+                        </div>
                       </div>
+                      <span class="bold">ARCHITECTE</span>
                       <div>
-                        <div class="contract">Diplôme d’État en Architecture</div>
-                        <div class="contract"><i>Mention Très Bien</i> | 2021</div>
+                        <div class="descDate">2024 - 2025</div>
+                        <div class="contract">CDI 9 mois</div>
                       </div>
+                      <div class="noMarginText number">5</div>
+                    </div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="underline">
+                        Chargée de projet<br />Conception
+                      </div>
+                      <div>Projet en phases APS, APD, PC<br />Autocad</div>
                       <div>
-                        <div class="contract">Licence d’Architecture | 2019</div>
+                        Architecture<br />Réhabilitation lourde<br />ERP &
+                        bureaux<br />Haut de gamme
                       </div>
                     </div>
-                    <div class="noMarginText number">2</div>
                   </div>
                 </div>
-                <div class="sectionItem back">
-                  <div class="contentWrapper">
-                    <div class="paper">
-                      <div class="paperName">"Réconciliations / Réhabilitation du site industriel de Gassicourt, Mantes-la-Jolie"</div>
-                      <div>Projet de fin d'études | 2021</div>
-                      <i>Mention Très Bien</i>
+              </div>
+
+              <div class="sectionItem image">
+                <img src="../images/sectionItems/jobSection1.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
+                      <div>
+                        <h3>ARTQAD ARCHITECTES</h3>
+                      </div>
+                      <span class="bold">ARCHITECTE</span>
+                      <div>
+                        <div class="descDate">2021 - 2023</div>
+                        <div class="contract">CDI</div>
+                      </div>
+                      <div class="noMarginText number">4</div>
                     </div>
-                    <div class="paper">
-                      <div class="paperName">"Production de l'espace public et associations / Étude de cas à Valencisse"</div>
-                      <div>Mémoire de fin d'études | 2021</div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="underline">
+                        Référente de projet BIM<br />Conception et exécution
+                      </div>
+                      <div>
+                        Projets en APD, PC, PRO, DCE, EXE<br />Suivi de chantier
+                      </div>
+                      <div>
+                        Architecture & architecture d’intérieur<br />Projets
+                        tertiaires et résidentiels<br />Restructuration<br />Haut
+                        de gamme
+                      </div>
                     </div>
-                    <div class="paper">
-                      <div class="paperName">"Éthique et responsabilité des architectes"</div>
-                      <div>Rapport de licence | 2019</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sectionItem image">
+                <img src="../images/sectionItems/jobSection2.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
+                      <div>
+                        <h3>GRAAL</h3>
+                      </div>
+                      <span class="bold">STAGIAIRE</span>
+                      <div>
+                        <div class="descDate">2020</div>
+                        <div class="contract">Formation pratique</div>
+                      </div>
+                      <div class="noMarginText number">3</div>
+                    </div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="underline">Stagiaire</div>
+                      <div>
+                        Revit<br />Candidatures<br />Maquettage<br />APS, APD<br />Chantier
+                      </div>
+                      <div>
+                        Architecture & urbanisme<br />Logements et équipements
+                        publics<br />Éco-construction
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sectionItem image">
+                <img src="../images/sectionItems/jobSection3.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
+                      <div>
+                        <h3>SAROAM</h3>
+                      </div>
+                      <span class="bold">STAGIAIRE</span>
+                      <div>
+                        <div class="descDate">2019</div>
+                        <div class="contract">Première pratique</div>
+                      </div>
+                      <div class="noMarginText number">2</div>
+                    </div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="underline">Stagiaire</div>
+                      <div>Revit<br />Étude de faisabilité<br />APS, APD</div>
+                      <div>
+                        Architecture & urbanisme<br />Logements et équipements
+                        publics<br />Éco-construction
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sectionItem image odds">
+                <img src="../images/sectionItems/jobSection4.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
+                      <div>
+                        <h3>STUDIO PRIVÉ</h3>
+                      </div>
+                      <span class="bold">STAGIAIRE</span>
+                      <div>
+                        <div class="descDate">2018</div>
+                        <div class="contract">Chantier</div>
+                      </div>
+                      <div class="noMarginText number">1</div>
+                    </div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="underline">Stagiaire</div>
+                      <div>Accompagnement et assistance sur chantier</div>
+                      <div>
+                        Architecture d’intérieur<br />résidentiel<br />Haut de
+                        gamme
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="sectionItem image odds">
-              <img src="../images/sectionItems/degreeSection3.jpg"/>
-            </div>
-            <div class="sectionItem image evens multiples">
-              <img src="../images/sectionItems/degreeSection1.jpg">
-            </div>
-            <div class="sectionItem image multiples odds">
-              <img src="../images/sectionItems/degreeSection4.jpg"/>
-            </div>
-            <div class="sectionItem image evens multiples">
-              <img src="../images/sectionItems/degreeSection2.jpg">
+            <div class="divider asterisk">
+              <img class="dividerLightMode" src="../images/asterisk.webp" />
+              <img
+                class="dividerDarkMode"
+                src="../images/darkIcons/asterisk.webp"
+              />
             </div>
 
-            <div class="siContainer">
-              <div class="sectionItem front">
+            <h2 class="header">FORMATION & DIPLÔMES</h2>
+
+            <div class="section">
+              <div class="sectionItem image odds">
+                <img src="../images/sectionItems/degreeSection1.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="flipper">
+                  <div class="sectionItem front">
+                    <div class="contentWrapper">
+                      <div>
+                        <h3>PARIS VAL DE SEINE</h3>
+                        <div class="subTitle">
+                          <i>ÊCOLE NATIONALE SUPÉRIEURE D'ARCHITECTURE</i>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <div class="descDate">2017 - 2021</div>
+                        </div>
+                        <div>
+                          <div class="contract">
+                            Diplôme d’État en Architecture
+                          </div>
+                          <div class="contract">
+                            <i>Mention Très Bien</i> | 2021
+                          </div>
+                        </div>
+                        <div>
+                          <div class="contract">
+                            Licence d’Architecture | 2019
+                          </div>
+                        </div>
+                      </div>
+                      <div class="noMarginText number">2</div>
+                    </div>
+                  </div>
+                  <div class="sectionItem back">
+                    <div class="contentWrapper">
+                      <div class="paper">
+                        <div class="paperName">
+                          "Réconciliations / Réhabilitation du site industriel
+                          de Gassicourt, Mantes-la-Jolie"
+                        </div>
+                        <div>Projet de fin d'études | 2021</div>
+                        <i>Mention Très Bien</i>
+                      </div>
+                      <div class="paper">
+                        <div class="paperName">
+                          "Production de l'espace public et associations / Étude
+                          de cas à Valencisse"
+                        </div>
+                        <div>Mémoire de fin d'études | 2021</div>
+                      </div>
+                      <div class="paper">
+                        <div class="paperName">
+                          "Éthique et responsabilité des architectes"
+                        </div>
+                        <div>Rapport de licence | 2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sectionItem image odds">
+                <img src="../images/sectionItems/degreeSection3.jpg" />
+              </div>
+              <div class="sectionItem image evens multiples">
+                <img src="../images/sectionItems/degreeSection1.jpg" />
+              </div>
+              <div class="sectionItem image multiples odds">
+                <img src="../images/sectionItems/degreeSection4.jpg" />
+              </div>
+              <div class="sectionItem image evens multiples">
+                <img src="../images/sectionItems/degreeSection2.jpg" />
+              </div>
+
+              <div class="siContainer">
+                <div class="sectionItem front">
+                  <div class="contentWrapper">
+                    <h3>UNIVERSITÉ PARIS 8</h3>
+                    <div class="paper">
+                      <div class="paperName">
+                        "La politique de la ville et le Grand Paris"
+                      </div>
+                      <div>Rapport de licence | 2016</div>
+                    </div>
+                    <div>
+                      <div class="descDate">2013 - 2016</div>
+                      <div class="contract">Licence de Science Politique</div>
+                      <i class="contract ita"
+                        >Spé. Sociologie et Anthropologie</i
+                      >
+                    </div>
+                    <div class="noMarginText number one">1</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sectionItem image odds">
+                <img src="../images/sectionItems/degreeSection2.jpg" />
+              </div>
+            </div>
+
+            <div class="divider asterisk">
+              <img class="dividerLightMode" src="../images/asterisk.webp" />
+              <img
+                class="dividerDarkMode"
+                src="../images/darkIcons/asterisk.webp"
+              />
+            </div>
+
+            <h2 class="header">OUTILS PRINCIPAUX</h2>
+
+            <div class="section" id="mainTools">
+              <div class="sectionItem">
                 <div class="contentWrapper">
-                  <h3>UNIVERSITÉ PARIS 8</h3>
-                  <div class="paper">
-                    <div class="paperName">"La politique de la ville et le Grand Paris"</div>
-                    <div>Rapport de licence | 2016</div>
-                  </div>
-                  <div>
-                    <div class="descDate">2013 - 2016</div>
-                    <div class="contract">Licence de Science Politique</div>
-                    <i class="contract ita">Spé. Sociologie et Anthropologie</i>
-                  </div>
-                  <div class="noMarginText number one">1</div>
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_revit.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/revit.webp"
+                  />
+                  <h3 class="underline">REVIT</h3>
+                </div>
+              </div>
+              <div class="sectionItem">
+                <div class="contentWrapper">
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_autocad.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/autocad.webp"
+                  />
+                  <h3 class="underline">AUTOCAD</h3>
+                </div>
+              </div>
+              <div class="sectionItem">
+                <div class="contentWrapper">
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_twinmotion.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/twinmotion.webp"
+                  />
+                  <h3 class="underline">TWINMOTION</h3>
+                </div>
+              </div>
+              <div class="sectionItem">
+                <div class="contentWrapper">
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_illustrator.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/illustrator.webp"
+                  />
+                  <h3 class="underline">ILLUSTRATOR</h3>
+                </div>
+              </div>
+              <div class="sectionItem">
+                <div class="contentWrapper">
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_photoshop.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/photoshop.webp"
+                  />
+                  <h3 class="underline">PHOTOSHOP</h3>
+                </div>
+              </div>
+              <div class="sectionItem">
+                <div class="contentWrapper">
+                  <img
+                    class="dividerLightMode"
+                    src="../images/icons/icon_indesign.webp"
+                  />
+                  <img
+                    class="dividerDarkMode"
+                    src="../images/darkIcons/indesign.webp"
+                  />
+                  <h3 class="underline">INDESIGN</h3>
                 </div>
               </div>
             </div>
+          </main>
 
-            <div class="sectionItem image odds">
-              <img src="../images/sectionItems/degreeSection2.jpg"/>
+          <div class="startEnd">
+            <div class="divider left up">
+              <img class="dividerLightMode" src="../images/icons/iconUp.webp" />
+              <img class="dividerDarkMode" src="../images/darkIcons/up.webp" />
             </div>
-
-          </div>
-
-          <div class="divider asterisk">
-            <img class="dividerLightMode" src="../images/asterisk.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/asterisk.webp">
-          </div>
-
-          <h2 class="header">OUTILS PRINCIPAUX</h2>
-
-          <div class="section" id="mainTools">
-
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_revit.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/revit.webp"/>
-                <h3 class="underline">REVIT</h3>
-              </div>
+            <div class="credits">
+              Site Web par <span class="bold">Chanwu Oh</span>
             </div>
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_autocad.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/autocad.webp"/>
-                <h3 class="underline">AUTOCAD</h3>
-              </div>
+            <div class="divider right up">
+              <img class="dividerLightMode" src="../images/icons/iconUp.webp" />
+              <img class="dividerDarkMode" src="../images/darkIcons/up.webp" />
             </div>
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_twinmotion.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/twinmotion.webp"/>
-                <h3 class="underline">TWINMOTION</h3>
-              </div>
-            </div>
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_illustrator.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/illustrator.webp"/>
-                <h3 class="underline">ILLUSTRATOR</h3>
-              </div>
-            </div>
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_photoshop.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/photoshop.webp"/>
-                <h3 class="underline">PHOTOSHOP</h3>
-              </div>
-            </div>
-            <div class="sectionItem">
-              <div class="contentWrapper">
-                <img class="dividerLightMode" src="../images/icons/icon_indesign.webp"/>
-                <img class="dividerDarkMode" src="../images/darkIcons/indesign.webp"/>
-                <h3 class="underline">INDESIGN</h3>
-              </div>
-            </div>
-
-          </div>
-
-        </main>
-
-        <div class="startEnd">
-          <div class="divider left up">
-            <img class="dividerLightMode" src="../images/icons/iconUp.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/up.webp">
-          </div>
-          <div class="credits">
-            Site Web par <span class="bold">Chanwu Oh</span>
-          </div>
-          <div class="divider right up">
-            <img class="dividerLightMode" src="../images/icons/iconUp.webp">
-            <img class="dividerDarkMode" src="../images/darkIcons/up.webp">
           </div>
         </div>
-
       </div>
-
     </div>
 
-  </div>
-
-  <script src="../JavaScript/script.js"></script>
-  <script src="../JavaScript/about.js"></script>
-  <script src="../JavaScript/slides.js"></script>
-
-</body>
+    <script src="../JavaScript/script.js"></script>
+    <script src="../JavaScript/about.js"></script>
+    <script src="../JavaScript/slides.js"></script>
+  </body>
 </html>
