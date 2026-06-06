@@ -1,5 +1,7 @@
 # Alix Chaput Architecture
 
+_[한국어로 보기 🇰🇷](README.ko.md)_
+
 Portfolio website for the architect Alix Chaput.
 
 **→ Live site:** https://ohchanwu.github.io/AlixChaputArchitecture/
