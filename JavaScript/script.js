@@ -159,15 +159,19 @@ function logRects() {
 
 function bracketManager() {
 	headers.forEach(header => {
-		const lines = getNumberOfLines(header);
 		const originalText = header.dataset.originalText;
 
-		if (lines > 1) {
-			header.textContent = originalText;
-		}
+		// Measure the braced string we actually intend to show, not the bare
+		// word. The braces add width, so a word that fits on one line on its
+		// own can still wrap once "{ ... }" is added (e.g. GASSICOURT on a
+		// narrow mobile header squeezed between the two dividers). Testing the
+		// braced text keeps the decoration only when "{ WORD }" truly fits on
+		// one line, and falls back to the bare word otherwise — the same rule
+		// multi-word headers already follow.
+		header.textContent = `{ ${originalText} }`;
 
-		if (lines === 1) {
-			header.textContent = `{ ${originalText} }`;
+		if (getNumberOfLines(header) > 1) {
+			header.textContent = originalText;
 		}
 	})
 };
