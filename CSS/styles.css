@@ -1452,3 +1452,39 @@ h2.header {
     }
   }
 }
+
+/* ---------- MEDIA LOAD FADE ---------- */
+/* Content media is hidden ONLY when JS has added .media-fade-enabled to <html>.
+   No JS / JS error -> class never added -> media renders normally. Scoped to
+   content media (cover slideshow, profile photo, section photos, project gallery)
+   so UI icons, dividers, language flags, software icons and the signature mark
+   are never hidden. */
+.media-fade-enabled .coverImage img,
+.media-fade-enabled #imgContainer img,
+.media-fade-enabled .sectionItem.image img,
+.media-fade-enabled .projectImg {
+  opacity: 0;
+  transition: opacity 360ms ease;
+}
+
+/* Reveal on success OR error — a broken image must never stay invisible. */
+.media-fade-enabled .coverImage img.is-media-loaded,
+.media-fade-enabled .coverImage img.is-media-error,
+.media-fade-enabled #imgContainer img.is-media-loaded,
+.media-fade-enabled #imgContainer img.is-media-error,
+.media-fade-enabled .sectionItem.image img.is-media-loaded,
+.media-fade-enabled .sectionItem.image img.is-media-error,
+.media-fade-enabled .projectImg.is-media-loaded,
+.media-fade-enabled .projectImg.is-media-error {
+  opacity: 1;
+}
+
+/* Honor a reduced-motion preference: reveal without the transition. */
+@media (prefers-reduced-motion: reduce) {
+  .media-fade-enabled .coverImage img,
+  .media-fade-enabled #imgContainer img,
+  .media-fade-enabled .sectionItem.image img,
+  .media-fade-enabled .projectImg {
+    transition: none;
+  }
+}

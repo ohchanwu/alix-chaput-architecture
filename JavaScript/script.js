@@ -1,3 +1,50 @@
+// -------------- Media load fade --------------- //
+// Progressive enhancement: content media (portfolio imagery, cover slideshow,
+// profile photo) starts transparent and fades in once it has loaded AND decoded,
+// so large images don't paint half-drawn. The hiding is gated on JS — CSS only
+// makes media transparent when this class is present, so no-JS / JS-error users
+// still see everything. Scoped to content media only, not UI icons or dividers.
+
+(function () {
+	function init() {
+		document.documentElement.classList.add('media-fade-enabled');
+
+		const reveal = el => el.classList.add('is-media-loaded');
+		const fail = el => el.classList.add('is-media-error'); // reveal broken media instead of leaving it invisible
+
+		function settleImage(img) {
+			const show = () => {
+				// decode() does the pixel work off the main thread for a jank-free fade.
+				// It can reject (some formats) — reveal anyway so nothing stays hidden.
+				if (img.decode) img.decode().then(() => reveal(img), () => reveal(img));
+				else reveal(img);
+			};
+			if (img.complete && img.naturalWidth > 0) { show(); return; } // already cached: no load event fires
+			if (img.complete) { fail(img); return; } // complete but no pixels = errored
+			img.addEventListener('load', show, { once: true });
+			img.addEventListener('error', () => fail(img), { once: true });
+		}
+
+		function settleVideo(video) {
+			if (video.readyState >= 2) { reveal(video); return; } // HAVE_CURRENT_DATA or better
+			video.addEventListener('loadeddata', () => reveal(video), { once: true });
+			video.addEventListener('error', () => fail(video), { once: true });
+		}
+
+		// Content media only: cover slideshow, about profile photo, section photos,
+		// and individual project gallery images. Excludes nav/theme/language/divider/
+		// software icons and the signature mark (all use the icon toggle mechanism).
+		const media = document.querySelectorAll(
+			'.coverImage img, #imgContainer img, .sectionItem.image img, .projectImg'
+		);
+		media.forEach(el => (el.tagName === 'VIDEO' ? settleVideo : settleImage)(el));
+	}
+
+	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+	else init();
+})();
+
+
 // -------------- Lightmode & Darkmode --------------- //
 
 
