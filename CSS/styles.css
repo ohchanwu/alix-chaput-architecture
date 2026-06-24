@@ -1,4 +1,15 @@
 :root {
+  /* Anchor the rem base explicitly. The universal `* { font-size: var(--textSize) }`
+     rule below also matches <html>, which would set the ROOT font-size to a `rem`
+     value (1.1rem). `rem` on the root is a circular reference that the spec resolves
+     against the initial 16px and that older/edge browsers have historically handled
+     inconsistently (the "base font sizing" browser-sensitivity). Declaring it here in
+     `%` (which references the user's default font size, not the root's own value) makes
+     the base deterministic and identical across browsers, renders byte-for-byte the same
+     on a default 16px setup, and also respects a user's custom default font size (a11y).
+     The three values mirror the --textSize breakpoint ramp (1.1 / 1.05 / 1rem). */
+  font-size: 110%;
+
   --unit: 14vh;
   --halfUnit: calc(var(--unit) / 2);
   --doubleUnit: calc(var(--unit) * 2);
@@ -793,6 +804,7 @@ h2.header {
 
 @media (max-width: 1560px) or (max-aspect-ratio: 1/3) {
   :root {
+    font-size: 105%; /* mirrors --textSize 1.05rem; keeps the rem base deterministic */
     --textSize: 1.05rem;
     --sectionItemPadding: var(--thirdUnit);
   }
@@ -924,6 +936,7 @@ h2.header {
 
 @media (max-width: 1100px) or (max-aspect-ratio: 1/3) {
   :root {
+    font-size: 100%; /* mirrors --textSize 1rem; keeps the rem base deterministic */
     --textSize: 1rem;
   }
 }
@@ -1459,12 +1472,21 @@ h2.header {
    content media (cover slideshow, profile photo, section photos, project gallery)
    so UI icons, dividers, language flags, software icons and the signature mark
    are never hidden. */
-.media-fade-enabled .coverImage img,
 .media-fade-enabled #imgContainer img,
 .media-fade-enabled .sectionItem.image img,
 .media-fade-enabled .projectImg {
   opacity: 0;
   transition: opacity 360ms ease;
+}
+
+/* Cover slideshow images also animate `filter` (grayscale -> color on hover,
+   see `.slides:not(.project) img`). The opacity-only `transition` shorthand
+   above would override that rule (this selector is more specific and the class
+   is always present once JS runs), making the color snap in instantly. List
+   both properties here so the load fade AND the hover color fade both work. */
+.media-fade-enabled .coverImage img {
+  opacity: 0;
+  transition: opacity 360ms ease, filter 0.5s ease;
 }
 
 /* Reveal on success OR error — a broken image must never stay invisible. */

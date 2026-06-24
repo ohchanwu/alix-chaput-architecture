@@ -133,7 +133,12 @@
 	font-size: calc(calc(var(--introHeight) - 2rem) / 22);
 }
 
-.introCloseText *:not(div) {
+/* Underline only the links, NOT the wrapping .bold span. A text-decoration on
+   the span is painted in the span's own coordinate space and does not follow
+   the child <a> when it shifts on hover (translateX/Y), leaving a dangling
+   underline/dash behind the moved link. Scoping to <a> keeps the underline
+   bound to the element that actually moves. */
+.introCloseText a {
 	text-decoration: underline;
 	text-decoration-thickness: 3px;
 	text-underline-offset: 4px;
