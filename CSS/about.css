@@ -139,9 +139,28 @@
    underline/dash behind the moved link. Scoping to <a> keeps the underline
    bound to the element that actually moves. */
 .introCloseText a {
-	text-decoration: underline;
-	text-decoration-thickness: 3px;
-	text-underline-offset: 4px;
+	position: relative;
+	text-decoration: none;
+}
+
+.introCloseText a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -4px;
+	height: 3px;
+	background: currentColor;
+	pointer-events: none;
+}
+
+.introCloseText.long a::after {
+	left: -4px;
+	right: auto;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	height: 100%;
 }
 
 .introCloseText.short,
@@ -249,7 +268,10 @@
 
 	.introCloseText * {
 		font-size: 1.2rem;
-		text-decoration-thickness: 2px !important;
+	}
+
+	.introCloseText a {
+		text-decoration: none;
 	}
 
 	#signature {
