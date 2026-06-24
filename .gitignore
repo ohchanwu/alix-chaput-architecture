@@ -1,2 +1,4 @@
 .DS_Store
 Alix Chaput Architecture Files/
+.gstack/
+.runtime/
